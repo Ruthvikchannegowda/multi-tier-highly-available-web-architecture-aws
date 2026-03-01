@@ -46,3 +46,38 @@ The architecture includes:
 * Amazon RDS (Master)
 * Read Replica
 * Automated replication
+
+🔐 Security Design
+* EC2 instances in private subnets
+* Security groups restricted by layer
+* Only ALB exposed publicly
+* Database not publicly accessible
+
+🚀 Deployment Steps
+* Create VPC and subnets
+* Configure Internet Gateway and route tables
+* Deploy ALB in public subnets
+* Deploy NGINX proxy in private subnets
+* Deploy application servers
+* Configure RDS with replication
+* Configure Route 53 DNS
+* Attach CloudFront distribution
+
+  
+📈 High Availability Strategy
+* Multi-AZ deployment
+* Load balancing across AZs
+* Database replication
+* Health checks
+* Auto scaling
+
+🧪 Testing
+* Load testing
+* Health check validation
+
+
+💡 Key Learnings
+* Designing multi-tier architecture
+* Implementing high availability
+* Database replication strategies
+* Secure subnet architecture
